@@ -18,7 +18,7 @@ const config: Config = {
       card: "hsla(215, 72%, 93%, 1)",
       flippaBlue: "hsla(222, 100%, 52%, 1)",
       headingText: "hsla(0, 0%, 0%, 1)",
-      subtitleText: "hsla(0, 0%, 44%, 1)",
+      subtitleText: "hsla(0, 0%, 51%, 1)",
     },
     spacing: {
       "600": "37.5rem"

@@ -31,7 +31,7 @@ const CalculatorPrice = ({
   return (
     <form onSubmit={handleNext}>
       <h3>Flippa profit Calculator</h3>
-      <p>
+      <p className="explainer-text">
         Simply Enter your asset price and let us do the number crunching for you
       </p>
       <input
@@ -53,10 +53,7 @@ const CalculatorPrice = ({
         required
       />
       <label htmlFor="price">Asset Price</label>
-      <button
-        type="submit"
-        className="text-flippaBlue border-4 border-flippaBlue rounded-10 px-2 py-"
-      >
+      <button type="submit" className="btn-primary">
         Calculate
       </button>
     </form>

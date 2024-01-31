@@ -26,3 +26,12 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer components {
+  .btn-primary {
+    @apply text-navigation bg-flippaBlue border-4 border-flippaBlue rounded-2xl px-2 py-2;
+  }
+  .explainer-text {
+    @apply text-2xl text-subtitleText opacity-100;
+  }
+}

@@ -14,17 +14,16 @@ export default function Home() {
           </ul>
         </nav>
       </header>
-      <main>
-        <section>
+      <main className="grid grid-cols-12">
+        <section className="col-start-3 col-end-10">
           <h3 className="text-4xl ">Thinking of selling your webite online?</h3>
           <h2 className="text-6xl text-headingText">
             Find the <span className="text-flippaBlue">optimum</span> price to
             sell your website
           </h2>
-          <button>Learn More</button>
         </section>
 
-        <section className="border-flippaBlue rounded-3xl min-h-600 border-4 w-600 p-[5rem]">
+        <section className="col-start-3 col-end-10 border-flippaBlue rounded-3xl min-h-600 border-4 w-600 p-[5rem]">
           <Calculator></Calculator>
         </section>
       </main>
