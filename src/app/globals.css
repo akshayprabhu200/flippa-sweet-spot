@@ -3,27 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  /* colors */
+  --color-background: hsla(224, 100%, 95%, 1);
+  --color-navigation: hsla(0, 0%, 100%, 1);
+  --color-card: hsla(215, 72%, 93%, 1);
+  --color-accent: hsla(222, 100%, 52%, 1);
+  --color-heading-text: hsla(0, 0%, 0%, 1);
+  --color-subtitle-text: hsla(0, 0%, 44%, 1);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  /* sizes */
+  --text-size-h2: 3.75rem;
+  --text-size-h3: 2.25rem;
+  --text-size-p: 1.5rem;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--color-background);
 }
 
 @layer utilities {

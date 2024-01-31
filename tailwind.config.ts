@@ -13,6 +13,16 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+    colors: {
+      navigation: "hsla(0, 0%, 100%, 1)",
+      card: "hsla(215, 72%, 93%, 1)",
+      flippaBlue: "hsla(222, 100%, 52%, 1)",
+      headingText: "hsla(0, 0%, 0%, 1)",
+      subtitleText: "hsla(0, 0%, 44%, 1)",
+    },
+    spacing: {
+      "600": "37.5rem"
+    }
     },
   },
   plugins: [],
