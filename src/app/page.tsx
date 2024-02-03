@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <header>
-        <nav className="h-24 bg-navigation flex items-center">
+        <nav className="h-24 bg-navigation flex items-center mb-28">
           <ul className="flex justify-around	items-center flex-grow">
             <li>Home</li>
             <li>Tools</li>
@@ -14,16 +14,17 @@ export default function Home() {
           </ul>
         </nav>
       </header>
-      <main className="grid grid-cols-12 gap-10">
-        <section className="col-start-2 col-end-10 md:col-start-3 md:col-end-6">
+      {/* Update grids for better useability */}
+      <main className="grid grid-cols-[1fr 4fr 4fr 1fr] gap-10">
+        <section className="col-start-2 col-end-4 md:col-start-2 md:col-end-3">
           <h3 className="text-4xl">Thinking of selling your webite online?</h3>
           <h2 className="text-6xl text-headingText">
             Find the <span className="text-flippaBlue">optimum</span> price to
             sell your website
           </h2>
         </section>
-
-        <section className="col-start-2 col-end-10 md:col-start-6 md:col-end-10 border-flippaBlue rounded-3xl md:min-h-600 border-4 w-600 p-[5rem]">
+        {/* Update all widths to match updated figma board */}
+        <section className="col-start-2 col-end-4 md:col-start-3 md:col-end-4 border-flippaBlue rounded-3xl md:min-h-600 border-4 w-600 p-[5rem]">
           <Calculator></Calculator>
         </section>
       </main>
