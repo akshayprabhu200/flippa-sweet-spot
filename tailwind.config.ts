@@ -21,6 +21,7 @@ const config: Config = {
       subtitleText: "hsla(0, 0%, 51%, 1)",
     },
     spacing: {
+      "300": "18.75rem",
       "600": "37.5rem"
     }
     },
