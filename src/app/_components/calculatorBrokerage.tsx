@@ -63,6 +63,7 @@ const CalculatorBrokerage = ({
         <label htmlFor="brokerageFees">Brokerage Fee</label>
       )}
       <button
+        className="btn-primary"
         onClick={(event) => {
           event.preventDefault();
           setStep(step + 1);

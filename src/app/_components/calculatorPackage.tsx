@@ -43,10 +43,7 @@ const CalculatorPackage = ({
         <option value="premium">Premium</option>
         <option value="ultimate">Ultimate</option>
       </select>
-      <button
-        type="submit"
-        className="text-flippaBlue border-4 border-flippaBlue rounded-10 px-2 py-"
-      >
+      <button className="btn-primary" type="submit">
         Next
       </button>
     </form>

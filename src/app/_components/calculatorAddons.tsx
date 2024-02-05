@@ -51,10 +51,7 @@ const CalculatorAddons = ({ step, setStep, addons, setAddons }: props) => {
           <label htmlFor={option.value}>{option.label}</label>
         </div>
       ))}
-      <button
-        type="submit"
-        className="text-flippaBlue border-4 border-flippaBlue rounded-10 px-2 py-"
-      >
+      <button type="submit" className="btn-primary">
         Next
       </button>
     </form>

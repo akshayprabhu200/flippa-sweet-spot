@@ -10,7 +10,7 @@ const Calculator = () => {
   const [assetPrice, setAssetPrice] = useState(0);
   const [brokeragePercent, setBrokeragePercent] = useState(0);
   const [brokerageBoolean, setBrokerageBoolean] = useState("no");
-  const [flippaPackage, setFlippaPackage] = useState("");
+  const [flippaPackage, setFlippaPackage] = useState("standard");
   const [addons, setAddons] = useState<string[]>([]);
   const [escrowPrice, setEscrowPrice] = useState(0);
   const [step, setStep] = useState(1);
