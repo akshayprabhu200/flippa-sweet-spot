@@ -28,10 +28,25 @@ body {
 }
 
 @layer components {
+  .cta-text {
+    @apply text-center text-3xl text-headingText md:text-7xl;
+  }
   .btn-primary {
-    @apply text-navigation bg-flippaBlue border-4 border-flippaBlue rounded-2xl px-2 py-2;
+    @apply rounded-2xl border-4 border-flippaBlue bg-flippaBlue px-2 py-2 text-navigation;
+  }
+  .calculator-title {
+    @apply text-3xl text-black md:text-5xl;
   }
   .explainer-text {
-    @apply text-2xl text-subtitleText opacity-100;
+    @apply text-xs text-subtitleText opacity-100 md:text-xl;
+  }
+  .subtitle-text {
+    @apply text-justify text-xs text-black opacity-100 md:text-xl;
+  }
+  .input-primary {
+    @apply h-10 w-[100%] rounded-lg border border-flippaBlue md:h-20 md:rounded-2xl;
+  }
+  .calculator-card {
+    @apply max-w-300 min-h-300 md:max-w-800 col-start-2 col-end-4 rounded-3xl border-4 border-flippaBlue p-[2rem] text-center md:col-start-3 md:col-end-4;
   }
 }

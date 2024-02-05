@@ -22,7 +22,11 @@ const config: Config = {
     },
     spacing: {
       "300": "18.75rem",
-      "600": "37.5rem"
+      "600": "37.5rem",
+      "800": "50rem"
+    },
+    gridTemplateColumns: {
+      'main-page': '1fr 6fr 6fr 1fr',
     }
     },
   },

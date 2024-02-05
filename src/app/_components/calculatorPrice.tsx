@@ -30,7 +30,7 @@ const CalculatorPrice = ({
 
   return (
     <form onSubmit={handleNext}>
-      <h3>Flippa profit Calculator</h3>
+      <h3 className="calculator-title">Flippa profit Calculator</h3>
       <p className="explainer-text">
         Simply Enter your asset price and let us do the number crunching for you
       </p>
@@ -38,13 +38,14 @@ const CalculatorPrice = ({
         type="number"
         name="price"
         id="price"
+        className="input-primary"
         value={assetPrice}
         onChange={(event) => {
           const price = parseFloat(event.target.value);
           setAssetPrice(price);
           if (price <= 0) {
             event.target.setCustomValidity(
-              "Price cannot be less than or equal to 0"
+              "Price cannot be less than or equal to 0",
             );
           } else {
             event.target.setCustomValidity("");

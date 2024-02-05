@@ -6,15 +6,18 @@ import CalculatorAddons from "./calculatorAddons";
 import CalculatorEscrow from "./calculatorEscrow";
 import CalculatorResults from "./calculatorResults";
 
-const Calculator = () => {
+type props = {
+  step: number;
+  setStep: React.Dispatch<React.SetStateAction<number>>;
+};
+
+const Calculator = ({ step, setStep }: props) => {
   const [assetPrice, setAssetPrice] = useState(0);
   const [brokeragePercent, setBrokeragePercent] = useState(0);
   const [brokerageBoolean, setBrokerageBoolean] = useState("no");
   const [flippaPackage, setFlippaPackage] = useState("standard");
   const [addons, setAddons] = useState<string[]>([]);
   const [escrowPrice, setEscrowPrice] = useState(0);
-  const [step, setStep] = useState(1);
-
   return (
     <>
       {step === 1 && (
