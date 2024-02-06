@@ -31,13 +31,13 @@ export default function Home() {
             </h2>
           )}
 
-          {step == 2 && (
+          {(step == 2 || step == 3 || step == 4) && (
             <h2 className="cta-text text-justify text-flippaBlue">
               Digital asset Brokers
             </h2>
           )}
 
-          {step == 2 && (
+          {(step == 2 || step == 3 || step == 4) && (
             <h3 className="subtitle-text">
               Just like brokers that sell houses and earn a commission on a
               successful sale, brokers also exist in the digital asset world as
