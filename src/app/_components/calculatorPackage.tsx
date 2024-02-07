@@ -25,9 +25,9 @@ const CalculatorPackage = ({
   };
 
   return (
-    <form onSubmit={handleNext}>
-      <h3>Flippa profit Calculator</h3>
-      <p>
+    <form onSubmit={handleNext} className="calculator-form">
+      <h3 className="calculator-title">Flippa profit Calculator</h3>
+      <p className="explainer-text">
         Flippa offers a variety of listing packages that are required in order
         to list on Flippa. This charge is separate from the success fee, which
         will depend on the amount that your website sells for.
@@ -38,6 +38,7 @@ const CalculatorPackage = ({
         value={flippaPackage}
         onChange={(event) => setFlippaPackage(event.target.value)}
         required
+        className="input-primary"
       >
         <option value="standard">Standard</option>
         <option value="premium">Premium</option>

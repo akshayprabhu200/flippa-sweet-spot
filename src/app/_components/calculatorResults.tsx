@@ -20,15 +20,19 @@ const CalculatorResults = ({
   addons,
 }: props) => {
   const [totalPrice, setTotalPrice] = useState(0);
+  const [brokerFee, setBrokerFee] = useState(0);
+  const [flippaSuccessFee, setFlippaSuccessFee] = useState(0);
+  const [flippaListingFee, setFlippaListingFee] = useState(0);
+
   useEffect(() => {
     calculate();
   }, []);
   const calculate = (): void => {
     let currPrice = assetPrice;
-    const brokerFee =
+    const currBrokerFee =
       brokerageBoolean === "yes" ? currPrice * brokeragePercent * 0.01 : 0;
 
-    console.log(brokerFee);
+    setBrokerFee(currBrokerFee);
     let flippaSuccessPercent = 0;
     // Add higher tiers
     if (assetPrice < 50000) {
@@ -43,8 +47,8 @@ const CalculatorResults = ({
       flippaSuccessPercent = 0.5;
     }
 
-    const flippaSuccessFee = assetPrice * flippaSuccessPercent;
-    console.log(flippaSuccessFee);
+    const currFlippaSuccessFee = assetPrice * flippaSuccessPercent;
+    setFlippaSuccessFee(currFlippaSuccessFee);
     let listingFee = 0;
     if (flippaPackage === "standard") {
       listingFee = 59;
@@ -53,19 +57,39 @@ const CalculatorResults = ({
     } else {
       listingFee = 499;
     }
-    console.log(listingFee);
+    setFlippaListingFee(listingFee);
     let optionalFee = 199 * addons.length;
     console.log(optionalFee);
     currPrice =
       assetPrice -
-      brokerFee -
+      currBrokerFee -
       flippaSuccessFee -
       listingFee -
       optionalFee -
       escrowPrice;
     setTotalPrice(currPrice);
   };
-  return <>${totalPrice}</>;
+  return (
+    <>
+      <article>
+        <h3 className="calculator-title">
+          <span className="text-flippaBlue">${totalPrice}</span>Total Profit
+        </h3>
+        <p className="explainer-text">
+          After accounting for all expenses, this is how much you will be left
+          with.
+        </p>
+        <p className="label-text">Here are some of the costs:</p>
+        <ul className="text-left text-subtitleText">
+          {brokerageBoolean == "yes" && <li>Broker: ${brokerFee}</li>}
+          <li>Flippa Success Fee: ${flippaSuccessFee}</li>
+          <li>Flippa Listing Fee: ${flippaListingFee}</li>
+          <li>Optional Addon Fee: ${199 * addons.length}</li>
+          <li>Escrow Fee: ${escrowPrice}</li>
+        </ul>
+      </article>
+    </>
+  );
 };
 
 export default CalculatorResults;

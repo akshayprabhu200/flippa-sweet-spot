@@ -35,18 +35,24 @@ body {
     @apply rounded-2xl border-4 border-flippaBlue bg-flippaBlue px-2 py-2 text-navigation;
   }
   .calculator-title {
-    @apply text-3xl text-black md:text-5xl;
+    @apply col-span-2 text-3xl text-black md:text-5xl;
   }
   .explainer-text {
-    @apply text-xs text-subtitleText opacity-100 md:text-xl;
+    @apply col-span-2 text-xs text-subtitleText opacity-100 md:text-xl;
   }
   .subtitle-text {
     @apply text-justify text-xs text-black opacity-100 md:text-xl;
   }
   .input-primary {
-    @apply h-10 w-[100%] rounded-lg border border-flippaBlue md:h-20 md:rounded-2xl;
+    @apply col-span-2 h-8 w-[100%] rounded-lg border border-flippaBlue md:h-16 md:rounded-2xl md:px-3;
   }
   .calculator-card {
-    @apply max-w-300 min-h-300 md:max-w-800 col-start-2 col-end-4 rounded-3xl border-4 border-flippaBlue p-[2rem] text-center md:col-start-3 md:col-end-4;
+    @apply col-start-2 col-end-4 min-h-300 max-w-300 rounded-3xl border-4 border-flippaBlue bg-card p-[2rem] text-center md:col-start-3 md:col-end-4 md:max-w-800;
+  }
+  .calculator-form {
+    @apply grid grid-cols-2 gap-y-4;
+  }
+  .label-text {
+    @apply text-left text-lg text-black md:text-2xl;
   }
 }

@@ -29,16 +29,20 @@ const CalculatorPrice = ({
   };
 
   return (
-    <form onSubmit={handleNext}>
+    <form onSubmit={handleNext} className="calculator-form">
       <h3 className="calculator-title">Flippa profit Calculator</h3>
       <p className="explainer-text">
         Simply Enter your asset price and let us do the number crunching for you
       </p>
+      <label className="col-start-1 col-end-2" htmlFor="price">
+        Asset Price
+      </label>
       <input
         type="number"
         name="price"
         id="price"
         className="input-primary"
+        placeholder="Enter your desired price"
         value={assetPrice}
         onChange={(event) => {
           const price = parseFloat(event.target.value);
@@ -53,7 +57,7 @@ const CalculatorPrice = ({
         }}
         required
       />
-      <label htmlFor="price">Asset Price</label>
+
       <button type="submit" className="btn-primary">
         Calculate
       </button>

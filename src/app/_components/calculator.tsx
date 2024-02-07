@@ -12,7 +12,7 @@ type props = {
 };
 
 const Calculator = ({ step, setStep }: props) => {
-  const [assetPrice, setAssetPrice] = useState(0);
+  const [assetPrice, setAssetPrice] = useState(NaN);
   const [brokeragePercent, setBrokeragePercent] = useState(0);
   const [brokerageBoolean, setBrokerageBoolean] = useState("no");
   const [flippaPackage, setFlippaPackage] = useState("standard");
